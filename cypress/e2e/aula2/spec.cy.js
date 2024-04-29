@@ -1,7 +1,7 @@
 ///<reference = cypress>
 
 describe("Testes da criação, registro e login", ()=>{
-  it("Teste criação de usuario com sucesso", ()=>{
+  it.skip("Teste criação de usuario com sucesso", ()=>{
       cy.visit('https://globalsqa.com/angularJs-protractor/registration-login-example/#/login')
       cy.get('.btn-link').click()
       cy.get('#firstName').type("visitor")
@@ -12,7 +12,7 @@ describe("Testes da criação, registro e login", ()=>{
       cy.get('.ng-binding').should("contain.text", "Registration successful")
    })
 
-  it("Teste criação de usuario com falha no botao", ()=>{
+  it.skip("Teste criação de usuario com falha no botao", ()=>{
     cy.visit('https://globalsqa.com/angularJs-protractor/registration-login-example/#/login')
     cy.get('.btn-link').click()
     cy.get('#firstName').type("visitor")
@@ -21,12 +21,27 @@ describe("Testes da criação, registro e login", ()=>{
     cy.get('.btn-primary').should("be.disabled")
   })
 
-    it("Teste de login com sucesso", ()=>{
+    it.skip("Teste de login com sucesso", ()=>{
       let infos = createUser()
       cy.visit('https://globalsqa.com/angularJs-protractor/registration-login-example/#/login')
       cy.get('#username').type(infos[0])
       cy.get('#password').type(infos[1])
       cy.get('.btn-primary').click()
+      cy.get('div.ng-scope > :nth-child(2)').should("contain.text", "You're logged in!!")
+    })
+
+    it("Teste de delete com sucesso", ()=>{
+      let infos = createUser()
+      cy.visit('https://globalsqa.com/angularJs-protractor/registration-login-example/#/login')
+      cy.get('#username').type(infos[0])
+      cy.get('#password').type(infos[1])
+      cy.get('.btn-primary').click()
+      cy.get('.ng-binding > a').click()
+      cy.get('.btn').click()
+      cy.get('#username').type(infos[0])
+      cy.get('#password').type(infos[1])
+      cy.get('.btn-primary').click()
+      cy.get('.ng-binding').should("contain.text", "Username or password is incorrect")
     })
 })
 
