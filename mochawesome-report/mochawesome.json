@@ -1,0 +1,158 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 3,
+    "failures": -3,
+    "start": "2024-05-06T18:30:26.503Z",
+    "end": "2024-05-06T18:30:35.945Z",
+    "duration": 9442,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 75,
+    "other": 3,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bde3a352-230e-419f-ad04-24d6027287f7",
+      "title": "",
+      "fullFile": "cypress\\e2e\\aula2\\spec.cy.js",
+      "file": "cypress\\e2e\\aula2\\spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1df3781f-7743-4371-95f8-60dd803a0387",
+          "title": "Testes da criação, registro e login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Teste criação de usuario com sucesso",
+              "fullTitle": "Testes da criação, registro e login Teste criação de usuario com sucesso",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "cy.visit('https://globalsqa.com/angularJs-protractor/registration-login-example/#/login');\ncy.get('.btn-link').click();\ncy.get('#firstName').type(\"visitor\");\ncy.get('#Text1').type(\"vis\");\ncy.get('#username').type(\"visitorr\");\ncy.get('#password').type(\"1234\");\ncy.get('.btn-primary').click();\ncy.get('.ng-binding').should(\"contain.text\", \"Registration successful\");",
+              "err": {},
+              "uuid": "67c9b75c-65b0-4c4c-94eb-37072c939686",
+              "parentUUID": "1df3781f-7743-4371-95f8-60dd803a0387",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Teste criação de usuario com falha no botao",
+              "fullTitle": "Testes da criação, registro e login Teste criação de usuario com falha no botao",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "cy.visit('https://globalsqa.com/angularJs-protractor/registration-login-example/#/login');\ncy.get('.btn-link').click();\ncy.get('#firstName').type(\"visitor\");\ncy.get('#Text1').type(\"vis\");\ncy.get('#username').type(\"visitorr\");\ncy.get('.btn-primary').should(\"be.disabled\");",
+              "err": {},
+              "uuid": "e4b8d7b2-5ac0-4174-ab9d-f7558a498eeb",
+              "parentUUID": "1df3781f-7743-4371-95f8-60dd803a0387",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Teste de login com sucesso",
+              "fullTitle": "Testes da criação, registro e login Teste de login com sucesso",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "let infos = createUser();\ncy.visit('https://globalsqa.com/angularJs-protractor/registration-login-example/#/login');\ncy.get('#username').type(infos[0]);\ncy.get('#password').type(infos[1]);\ncy.get('.btn-primary').click();\ncy.get('div.ng-scope > :nth-child(2)').should(\"contain.text\", \"You're logged in!!\");",
+              "err": {},
+              "uuid": "d663e5fc-4b6e-45ac-9a6b-782bcdfbb1df",
+              "parentUUID": "1df3781f-7743-4371-95f8-60dd803a0387",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Teste de delete com sucesso",
+              "fullTitle": "Testes da criação, registro e login Teste de delete com sucesso",
+              "timedOut": null,
+              "duration": 7248,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let infos = createUser();\ncy.visit('https://globalsqa.com/angularJs-protractor/registration-login-example/#/login');\ncy.get('#username').type(infos[0]);\ncy.get('#password').type(infos[1]);\ncy.get('.btn-primary').click();\ncy.get('.ng-binding > a').click();\ncy.get('.btn').click();\ncy.get('#username').type(infos[0]);\ncy.get('#password').type(infos[1]);\ncy.get('.btn-primary').click();\ncy.get('.ng-binding').should(\"contain.text\", \"Username or password is incorrect\");",
+              "err": {},
+              "uuid": "7b5eba19-041a-4ae0-b254-db78fffa9011",
+              "parentUUID": "1df3781f-7743-4371-95f8-60dd803a0387",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7b5eba19-041a-4ae0-b254-db78fffa9011"
+          ],
+          "failures": [],
+          "pending": [
+            "67c9b75c-65b0-4c4c-94eb-37072c939686",
+            "e4b8d7b2-5ac0-4174-ab9d-f7558a498eeb",
+            "d663e5fc-4b6e-45ac-9a6b-782bcdfbb1df"
+          ],
+          "skipped": [],
+          "duration": 7248,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
