@@ -1,23 +1,23 @@
-## Readme
+## Read-me
 
-### Generating Test Reports
+### Gerando Relatórios de Testes
 
-This project utilizes the Mochawesome plugin to generate test reports.
+Este projeto utiliza o plugin Mochawesome para gerar relatórios de testes.
 
-To generate a report for tests in a specific folder (e.g., Aula4), use the following command:
+Para gerar um relatório para testes em uma pasta específica (por exemplo, Aula4), utilize o seguinte comando:
 
 ```bash
 npx cypress run --spec "cypress/e2e/Aula4/*.js" --reporter mochawesome
 ```
 
-This command generates a report for the spec files within the Aula4 folder. You can modify the path to target any folder containing test specs.
+Este comando gera um relatório para os arquivos de especificação dentro da pasta Aula4. Você pode modificar o caminho para direcionar qualquer pasta contendo especificações de teste.
 
-Alternatively, you can generate a single report containing all tests with the following command:
+Alternativamente, você pode gerar um único relatório contendo todos os testes com o seguinte comando:
 
 ```bash
 npx cypress run --reporter mochawesome
 ```
 
-**Note:** These commands should be executed in the top-level directory of the project, where the `package.json` file is located.
+**Nota:** Estes comandos devem ser executados no diretório de nível superior do projeto, onde o arquivo `package.json` está localizado.
 
-The generated report can be found in the `mochawesome-report` directory in HTML format, and it can be opened in any web browser.
+O relatório gerado pode ser encontrado no diretório `mochawesome-report` no formato HTML, e pode ser aberto em qualquer navegador da web.
