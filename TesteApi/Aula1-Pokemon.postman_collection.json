@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "39cdc518-cfb7-43ec-82aa-f8b5393a412b",
+		"name": "Aula1-Pokemon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15166003"
+	},
+	"item": [
+		{
+			"name": "Localiza pokemon com sucesso",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/pokemon/ditto",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"pokemon",
+						"ditto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nao localiza pokemon(nao existe)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/pokemon/huehue",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"pokemon",
+						"huehue"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Endpoint falho localiza pokemon",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/digimon/ditto",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"digimon",
+						"ditto"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
