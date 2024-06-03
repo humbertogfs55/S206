@@ -1,0 +1,243 @@
+{
+	"id": "cf014454-964a-4c3c-b33b-5c9ec618cda7",
+	"name": "REQRES",
+	"timestamp": "2024-06-03T19:48:46.727Z",
+	"collection_id": "15166003-1009863e-c6e4-4ba3-8e51-d5a2d8b017f8",
+	"folder_id": 0,
+	"environment_id": "15166003-d87c7eb5-0266-48dc-93a8-503c70cb9430",
+	"totalPass": 14,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-06-03T19:48:44.392Z",
+	"totalFail": 2,
+	"results": [
+		{
+			"id": "dc7fe89b-efe4-47b4-b7b2-f2e71c426d40",
+			"name": "ListUsers",
+			"url": "https://reqres.in/api/users?page=2",
+			"time": 24,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is within an acceptable range": true,
+				"Response status code is 200": true,
+				"Validate the schema of the response body": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is within an acceptable range": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the schema of the response body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				24
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is within an acceptable range": true,
+					"Response status code is 200": true,
+					"Validate the schema of the response body": true
+				}
+			]
+		},
+		{
+			"id": "eb12180b-1e26-4ed6-a4e0-68560b32df78",
+			"name": "CreateUser",
+			"url": "https://reqres.in/api/users",
+			"time": 423,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Successful POST request": true,
+				"Response time is within an acceptable range": true,
+				"Response body has the required fields according to the user schema": true
+			},
+			"testPassFailCounts": {
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is within an acceptable range": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body has the required fields according to the user schema": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				423
+			],
+			"allTests": [
+				{
+					"Successful POST request": true,
+					"Response time is within an acceptable range": true,
+					"Response body has the required fields according to the user schema": true
+				}
+			]
+		},
+		{
+			"id": "fac2b0ed-4da2-4019-98f9-35097ef12bba",
+			"name": "RegisterSuccessful",
+			"url": "https://reqres.in/api/register",
+			"time": 437,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response body has the required fields according to the register schema": true,
+				"Id value in the response is equal to 4": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body has the required fields according to the register schema": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id value in the response is equal to 4": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				437
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response body has the required fields according to the register schema": true,
+					"Id value in the response is equal to 4": true
+				}
+			]
+		},
+		{
+			"id": "023b0d0d-9734-400f-a3ca-054ef59a4cd3",
+			"name": "UpdateUser",
+			"url": "https://reqres.in/api/users/391",
+			"time": 420,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": false,
+				"Response body should match the schema for user details": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response body should match the schema for user details": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				420
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": false,
+					"Response body should match the schema for user details": true
+				}
+			]
+		},
+		{
+			"id": "f1324e07-b1a4-42c7-9b36-c2ae8d66c09f",
+			"name": "DeleteUser",
+			"url": "https://reqres.in/api/users/3",
+			"time": 536,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 204": true,
+				"Response time is within an acceptable range": false,
+				"Response body is null": true
+			},
+			"testPassFailCounts": {
+				"Status code is 204": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is within an acceptable range": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response body is null": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				536
+			],
+			"allTests": [
+				{
+					"Status code is 204": true,
+					"Response time is within an acceptable range": false,
+					"Response body is null": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1840,
+	"collection": {
+		"requests": [
+			{
+				"id": "dc7fe89b-efe4-47b4-b7b2-f2e71c426d40",
+				"method": "GET"
+			},
+			{
+				"id": "eb12180b-1e26-4ed6-a4e0-68560b32df78",
+				"method": "POST"
+			},
+			{
+				"id": "fac2b0ed-4da2-4019-98f9-35097ef12bba",
+				"method": "POST"
+			},
+			{
+				"id": "023b0d0d-9734-400f-a3ca-054ef59a4cd3",
+				"method": "PUT"
+			},
+			{
+				"id": "f1324e07-b1a4-42c7-9b36-c2ae8d66c09f",
+				"method": "DELETE"
+			}
+		]
+	}
+}
